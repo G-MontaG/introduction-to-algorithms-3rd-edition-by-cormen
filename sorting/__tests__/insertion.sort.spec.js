@@ -1,4 +1,4 @@
-import { insertionSort, descendingInsertionSort } from "../insertion-sort";
+import { insertionSort } from "../insertion-sort";
 
 describe('Insertion sort', () => {
     describe('insertionSort function', () => {
@@ -11,16 +11,15 @@ describe('Insertion sort', () => {
             insertionSort(array);
             expect(array).toStrictEqual([2, 4, 6, 1]);
         });
-    });
-    describe('descendingInsertionSort function', () => {
-        test('should sort array of number in descending order',() => {
-            expect(descendingInsertionSort([2, 4, 6, 1])).toStrictEqual([6, 4, 2, 1]);
-            expect(descendingInsertionSort([9, 3, 1, 5])).toStrictEqual([9, 5, 3, 1]);
-        });
-        test('should not mutate original array',() => {
-            let array = [2, 4, 6, 1];
-            descendingInsertionSort(array);
-            expect(array).toStrictEqual([2, 4, 6, 1]);
-        });
+        test('should not mutate original array even if it stay the same',() => {
+            let array = [1, 2, 4, 6];
+            let sortedArray = insertionSort(array);
+            expect(array).not.toBe(sortedArray);
+        })
+        test('should not mutate original array even if it contain one item',() => {
+            let array = [1];
+            let sortedArray = insertionSort(array);
+            expect(array).not.toBe(sortedArray);
+        })
     });
 });

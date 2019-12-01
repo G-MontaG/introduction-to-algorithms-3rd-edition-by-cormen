@@ -11,5 +11,15 @@ describe('Merge sort', () => {
             mergeSort(array);
             expect(array).toStrictEqual([2, 4, 6, 1]);
         });
+        test('should not mutate original array even if it stay the same',() => {
+            let array = [1, 2, 4, 6];
+            let sortedArray = mergeSort(array);
+            expect(array).not.toBe(sortedArray);
+        })
+        test('should not mutate original array even if it contain one item',() => {
+            let array = [1];
+            let sortedArray = mergeSort(array);
+            expect(array).not.toBe(sortedArray);
+        })
     });
 });
