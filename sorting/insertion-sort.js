@@ -1,14 +1,26 @@
-
 // Time complexity: O(N^2)
 export function insertionSort([...array]) {
-    for (let j = 1, length = array.length; j < length; j++) {
-        let key = array[j];
-        let i = j - 1;
-        while (i >= 0 && array[i] > key) {
-            array[i + 1] = array[i];
-            i--;
+    // If array is empty or consists of one element then return this array since it is sorted.
+    if (array.length <= 1) {
+        return array;
+    }
+
+    // Go through all array elements...
+    for (let i = 0, length = array.length; i < length; i++) {
+        let currentIndex = i;
+
+        // Go and check if previous elements and greater then current one.
+        // If this is the case then swap that elements.
+        while (array[currentIndex - 1] !== undefined &&
+            array[currentIndex] < array[currentIndex - 1]) {
+            // Swap the elements.
+            const tmp = array[currentIndex - 1];
+            array[currentIndex - 1] = array[currentIndex];
+            array[currentIndex] = tmp;
+
+            // Shift current index left.
+            currentIndex--;
         }
-        array[i + 1] = key;
     }
     return array;
 }
