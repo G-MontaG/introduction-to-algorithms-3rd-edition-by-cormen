@@ -1,14 +1,14 @@
 {
-  "name": "introduction-to-algorithms-3rd-edition-by-cormen",
+  "name": "javascript-algorithms",
   "version": "1.0.0",
-  "description": "Javascript interpretation of book Introduction to algorithms (3rd edition) Tomas H. Cormen",
+  "description": "This is my second attempt to structure knowledge in computer science",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/G-MontaG/introduction-to-algorithms-3rd-edition-by-cormen.git"
+    "url": "git+https://github.com/G-MontaG/javascript-algorithms.git"
   },
   "keywords": [
     "algorithms",
@@ -18,9 +18,9 @@
   "author": "Artur Osypenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/G-MontaG/introduction-to-algorithms-3rd-edition-by-cormen/issues"
+    "url": "https://github.com/G-MontaG/javascript-algorithms/issues"
   },
-  "homepage": "https://github.com/G-MontaG/introduction-to-algorithms-3rd-edition-by-cormen#readme",
+  "homepage": "https://github.com/G-MontaG/javascript-algorithms#readme",
   "engines": {
     "node": "^13.2.0",
     "npm": "^6.13.0"

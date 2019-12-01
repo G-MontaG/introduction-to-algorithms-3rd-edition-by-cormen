@@ -1,3 +1,5 @@
+
+// Time complexity: O(N^2)
 export function insertionSort([...array]) {
     for (let j = 1, length = array.length; j < length; j++) {
         let key = array[j];
