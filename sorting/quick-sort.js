@@ -1,6 +1,6 @@
 // Time complexity: O(n^2)
 // Memory: log(n)
-export function quickSort([...array]) {
+export default function quickSort([...array]) {
     // If array has less than or equal to one elements then it is already sorted.
     if (array.length <= 1) {
         return array;

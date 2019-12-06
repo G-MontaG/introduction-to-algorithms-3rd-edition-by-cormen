@@ -1,13 +1,13 @@
 // Time complexity: O(n*(log(n))^2)
 // Memory: 1
-export function shellSort([...array]) {
+export default function shellSort([...array]) {
     // Define a gap distance.
     let gap = Math.floor(array.length / 2);
 
     // Until gap is bigger then zero do elements comparisons and swaps.
     while (gap > 0) {
         // Go and compare all distant element pairs.
-        for (let i = 0, length = array.length; i < (length - gap); i += 1) {
+        for (let i = 0, length = array.length; i < (length - gap); i++) {
             let currentIndex = i;
             let gapShiftedIndex = i + gap;
 

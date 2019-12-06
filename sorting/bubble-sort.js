@@ -1,13 +1,13 @@
 // Time complexity: O(n^2)
 // Memory: 1
-export function bubbleSort([...array]) {
+export default function bubbleSort([...array]) {
     // Flag that holds info about whether the swap has occur or not.
     let swapped = false;
 
-    for (let i = 1; i < array.length; i += 1) {
+    for (let i = 1, lenght = array.length; i < lenght; i++) {
         swapped = false;
 
-        for (let j = 0; j < array.length - i; j += 1) {
+        for (let j = 0; j < lenght - i; j++) {
             // Swap elements if they are in wrong order.
             if (array[j + 1] < array[j]) {
                 [array[j], array[j + 1]] = [array[j + 1], array[j]];

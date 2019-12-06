@@ -1,6 +1,6 @@
 // Time complexity: O(n^2)
 // Memory: 1
-export function selectionSort([...array]) {
+export default function selectionSort([...array]) {
     for (let i = 0, length = array.length; i < length - 1; i++) {
         let minIndex = i;
 

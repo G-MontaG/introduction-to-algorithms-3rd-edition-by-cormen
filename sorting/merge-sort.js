@@ -1,6 +1,6 @@
 // Time complexity: O(n*log(n))
 // Memory: 1
-export function mergeSort([...array]) {
+export default function mergeSort([...array]) {
     // If array is empty or consists of one element then return this array since it is sorted.
     if (array.length <= 1) {
         return array;

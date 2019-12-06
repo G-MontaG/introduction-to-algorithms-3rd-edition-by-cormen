@@ -1,6 +1,6 @@
 // Time complexity: O(n^2)
 // Memory: 1
-export function insertionSort([...array]) {
+export default function insertionSort([...array]) {
     // If array is empty or consists of one element then return this array since it is sorted.
     if (array.length <= 1) {
         return array;
